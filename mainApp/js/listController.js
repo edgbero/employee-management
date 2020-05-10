@@ -30,6 +30,7 @@ angular
         self.pageSize = filter.pageSize;
         self.sort = filter.sort;
         self.search = filter.search;
+        window.localStorage.removeItem('data-filter');
     }
 
     function getEmployee () {
