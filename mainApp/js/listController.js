@@ -13,6 +13,7 @@ angular
     // initilize function
     self.getEmployee = getEmployee;
     self.showNotif = showNotif;
+    self.saveFilter = saveFilter;
     
     if(window.localStorage.getItem('data-employee') === null )
     {
@@ -20,7 +21,15 @@ angular
     }
     else {
         self.employee = JSON.parse(window.localStorage.getItem('data-employee'));
-        console.log(self.employee)
+    }
+
+    if(window.localStorage.getItem('data-filter') !== null)
+    {
+        var filter = JSON.parse(window.localStorage.getItem('data-filter'));
+        self.currentPage = filter.currentPage;
+        self.pageSize = filter.pageSize;
+        self.sort = filter.sort;
+        self.search = filter.search;
     }
 
     function getEmployee () {
@@ -36,6 +45,16 @@ angular
             hideDelay: 26000,
             position: 'top right'
         });
+    }
+
+    function saveFilter() {
+        var filter = {
+            'currentPage': self.currentPage,
+            'pageSize': self.pageSize,
+            'sort': self.sort,
+            'search': self.search,
+        }
+        window.localStorage.setItem('data-filter', JSON.stringify(filter))
     }
 
 });

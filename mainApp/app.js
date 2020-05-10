@@ -12,7 +12,12 @@ app.config(function($routeProvider, $locationProvider) {
         controller: "listController"
     })
     .when("/add", {
-        templateUrl: "pages/add.html"
+        templateUrl: "pages/add.html",
+        controller: "addController"
+    })
+    .when("/detail/:username", {
+        templateUrl: "pages/detail.html",
+        controller: "detailController"
     })
     .otherwise ({
         redirectTo: "/login"

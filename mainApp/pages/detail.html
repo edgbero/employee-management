@@ -1,0 +1,40 @@
+<div class="container detail-container" ng-controller="detailController as detail">
+    <div class="row mt-5 mb-3">
+        <h1 class="title col-sm-12 col-md-10 p-0">{{detail.data.name}}</h1>
+    </div>
+    <div class="row">
+        <table class="table">
+            <tr>
+                <td colspan="2" class="font-weight-bold">Name</td>
+                <td>{{detail.data.name}}</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="font-weight-bold">Email</td>
+                <td>{{detail.data.email}}</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="font-weight-bold">Date of Birth</td>
+                <td>{{detail.data.birthDate | date}}</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="font-weight-bold">Salary</td>
+                <td>{{detail.data.basicSalary | currency:"Rp "}}</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="font-weight-bold">Status</td>
+                <td>{{detail.data.status}}</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="font-weight-bold">Group</td>
+                <td>{{detail.data.group}}</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="font-weight-bold">Description</td>
+                <td>{{detail.data.description | date}}</td>
+            </tr>
+        </table>
+    </div>
+    <a href="#/list">
+        <button class="btn btn-ok">Ok</button>
+    </a>
+</div>

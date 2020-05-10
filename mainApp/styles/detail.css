@@ -1,0 +1,19 @@
+.detail-container .title {
+    color: #64bdc0;
+    font-weight: bold;
+}
+
+.detail-container .btn-ok {
+    background-color: #64bdc0;
+}
+
+.detail-container .btn-ok:hover { 
+    background-color: #1c6769;
+}
+
+.detail-container .btn {
+    font-weight: bold;
+    float: right;
+    padding: 10px 30px;
+    background-color: #64bdc0;
+    color: #ffffff;

@@ -23,8 +23,8 @@
             </select>
         </div>
         <div>
-            <input type="text" placeholder="Search Name" ng-model="search.firstName">
-            <input type="text" placeholder="Search Email" ng-model="search.email">
+            <input type="text" placeholder="Search Name" ng-model="list.search.firstName">
+            <input type="text" placeholder="Search Email" ng-model="list.search.email">
         </div>
     </div>
     <table class="table table-responsive-sm table-bordered">
@@ -39,22 +39,22 @@
             <th>Action</th>
         </thead>
         <tbody>
-            <tr ng-repeat="employee in list.employee | filter:search | orderBy:list.sort | startFrom:(list.currentPage - 1) * list.pageSize | limitTo:list.pageSize">
+            <tr ng-repeat="employee in list.employee | filter:list.search | orderBy:list.sort | startFrom:(list.currentPage - 1) * list.pageSize | limitTo:list.pageSize">
                 <td>{{employee.firstName}} {{employee.lastName}}</td>
                 <td>{{employee.email}}</td>
                 <td>{{employee.birthDate | date:"dd/MM/yyyy "}}</td>
-                <td>{{employee.basicSalary | number: 0}}</td>
+                <td>{{employee.basicSalary | currency:"Rp "}}</td>
                 <td>{{employee.status}}</td>
                 <td>{{employee.group}}</td>
                 <td>{{employee.description | date:"dd/MM/yyyy"}}</td>
                 <td>
                     <button class="btn btn-block btn-warning" ng-click="list.showNotif('edit', 'Edit Notif')">Edit</button>
                     <button class="btn btn-block btn-danger" ng-click="list.showNotif('delete', 'Delet Notif')">Delete</button>
-                    <button class="btn btn-block btn-secondary">Detail</button>
+                    <a href="#/detail/{{employee.username}}" class="btn btn-block btn-secondary" ng-click="list.saveFilter()">Detail</button>
                 </td>
             </tr>
         </tbody>
     </table>
 
-    <ul uib-pagination total-items="list.employee.length" ng-model="list.currentPage" items-per-page="list.pageSize"> </ul>
+    <ul class="mb-5"  uib-pagination total-items="list.employee.length" ng-model="list.currentPage" items-per-page="list.pageSize"> </ul>
 </div>
