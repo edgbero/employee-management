@@ -1,0 +1,60 @@
+<div class="container list-container" ng-controller="listController as list">
+    <div class="row mt-5 mb-5">
+        <h1 class="title col-sm-12 col-md-10 p-0">Employee List</h1>
+        <a href="#/add" class="btn btn-add col-sm-12 col-md-2">
+            <button class="btn text-white">Add Employee</button>
+        </a>
+    </div>
+    <div class="row search-box">
+        <div>
+            <select class="custom-select" ng-model="list.pageSize">
+                <option value="5" selected>5</option>
+                <option value="10">10</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+            </select>
+            <select class="custom-select" ng-model="list.sort">
+                <option value="firstName">Name</option>
+                <option value="email">Email</option>
+                <option value="birthDate">Birth Date</option>
+                <option value="-basicSalary">Salary</option>
+                <option value="group">Group</option>
+            </select>
+        </div>
+        <div>
+            <input type="text" placeholder="Search Name" ng-model="search.firstName">
+            <input type="text" placeholder="Search Email" ng-model="search.email">
+        </div>
+    </div>
+    <table class="table table-responsive-sm table-bordered">
+        <thead>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Birth Date</th>
+            <th>Salary</th>
+            <th>Status</th>
+            <th>Group</th>
+            <th>Description</th>
+            <th>Action</th>
+        </thead>
+        <tbody>
+            <tr ng-repeat="employee in list.employee | filter:search | orderBy:list.sort | startFrom:(list.currentPage - 1) * list.pageSize | limitTo:list.pageSize">
+                <td>{{employee.firstName}} {{employee.lastName}}</td>
+                <td>{{employee.email}}</td>
+                <td>{{employee.birthDate | date:"dd/MM/yyyy "}}</td>
+                <td>{{employee.basicSalary | number: 0}}</td>
+                <td>{{employee.status}}</td>
+                <td>{{employee.group}}</td>
+                <td>{{employee.description | date:"dd/MM/yyyy"}}</td>
+                <td>
+                    <button class="btn btn-block btn-warning" ng-click="list.showNotif('edit', 'Edit Notif')">Edit</button>
+                    <button class="btn btn-block btn-danger" ng-click="list.showNotif('delete', 'Delet Notif')">Delete</button>
+                    <button class="btn btn-block btn-secondary">Detail</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul uib-pagination total-items="list.employee.length" ng-model="list.currentPage" items-per-page="list.pageSize"> </ul>
+</div>

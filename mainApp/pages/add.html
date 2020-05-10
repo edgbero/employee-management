@@ -1,0 +1,83 @@
+<div class="container add-container" ng-controller="addController as add">
+    <div class="row mt-5">
+        <h1 class="title col-sm-12 col-md-10 pl-0">Add Employee</h1>
+    </div>
+    <hr>
+    <div>
+        <form name="addForm" ng-submit="addForm.$valid ? add.submit() : return">
+            <div class="row">
+                <div class="form-group col-md-6 pl-0">
+                    <label for="username">Username*</label>
+                    <input type="text" id="username" name="username" class="form-control" placeholder="Enter username" ng-model="add.username" required>
+                    <span class="text-danger" ng-if="addForm.username.$touched && addForm.username.$invalid">The username is required</span>
+                </div>
+                <div class="form-group col-md-6 pl-0">
+                    <label for="password">Password*</label>
+                    <input type="password" id="password" name="password" class="form-control" placeholder="Enter password" ng-model="add.password" required>
+                    <span class="text-danger" ng-if="addForm.password.$touched && addForm.password.$invalid">The password is required</span>
+                </div>
+            </div>
+           
+            <div class="row">
+                <div class="form-group col-sm-6 pl-0">
+                    <label for="firstName">First name*</label>
+                    <input type="text" id="firstName" name="firstname" class="form-control" placeholder="Enter First name" ng-model="add.firstName" required>
+                    <span class="text-danger" ng-if="addForm.firstname.$touched && addForm.firstname.$invalid">The firstname is required</span>
+                </div>
+                <div class="form-group col-sm-6 pl-0">
+                    <label for="lastName">Last name*</label>
+                    <input type="text" id="lastName" name="lastname" class="form-control" placeholder="Enter Last name" ng-model="add.lastName" required>
+                    <span class="text-danger" ng-if="addForm.lastname.$touched && addForm.lastname.$invalid">The lastname is required</span>
+                </div>
+            </div>
+            <div class="form-group col-md-6 pl-0">
+                <label for="">Email*</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="Enter email" ng-model="add.email" required>
+                <span class="text-danger" ng-if="addForm.email.$touched && addForm.email.$invalid">The email is required</span>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-3 pl-0">
+                    <label for="birthDate">Date of birth*</label>
+                    <input type="date" id="birthDate" name="dateOfBirth" class="form-control" ng-model="add.dateOfBirth" max="{{add.currentDate}}" required>
+                    <span class="text-danger" ng-if="addForm.dateOfBirth.$touched && addForm.dateOfBirth.$invalid">The date of birth is required</span>
+                </div>
+                <div class="form-group col-md-3 pl-0">
+                    <label for="status">Status*</label>
+                    <select class="custom-select" name="status" id="status" ng-model="add.status" required>
+                        <option value="Single">Single</option>
+                        <option value="Married">Married</option>
+                    </select>
+                    <span class="text-danger" ng-if="addForm.dateOfBirth.$touched && addForm.dateOfBirth.$invalid">The date of birth is required</span>
+                </div>
+            </div>
+            <div class="form-group col-md-6 pl-0">
+                <label for="basicSalary">Salary*</label>
+                <input type="number" id="basicSalary" name="salary" class="form-control" placeholder="Enter salary" ng-model="add.salary" required>
+                <span class="text-danger" ng-if="addForm.salary.$touched && addForm.salary.$invalid">The salary is required</span>
+            </div>
+            <div class="form-group col-md-6 pl-0">
+                <label>Group*</label>
+                <input class="custom-select" list="group" name="group" placeholder="Search Group Name" ng-model="add.group" required>
+                <datalist id="group">
+                    <option value="A">
+                    <option value="B">
+                    <option value="C">
+                    <option value="D">
+                    <option value="E">
+                    <option value="F">
+                    <option value="G">
+                    <option value="H">
+                    <option value="I">
+                    <option value="J">
+                </datalist>
+                <span class="text-danger" ng-if="addForm.group.$touched && addForm.group.$invalid">The group is required</span>
+            </div>
+            <div class="row justify-content-center mt-5">
+                <button type="submit" class="btn btn-submit mb-3">Submit</button>
+                <a href="#/list">
+                    <button class="btn btn-cancel">Cancel</button>
+                </a>
+            </div>
+        </form>
+    </div>
+</div>

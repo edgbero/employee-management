@@ -1,12 +1,15 @@
-body {
-    display: flex;
-    height: 100vh;
+.background-blue {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
     background-image: linear-gradient(to right, #c0e4e4, #64bdc0, #1c6769);
 }
-.container {
+
+.login-container {
     margin: auto;
 }
-.row{
+.login-container .row{
     margin: 0;
 }
 

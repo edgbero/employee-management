@@ -3,49 +3,41 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link
-        rel="stylesheet"
-        href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-        crossorigin="anonymous"
-        />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="home.css">
-        <title>Login | Employee Management</title>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.1/angular-material.min.css">
+        <!-- styles -->
+        <link rel="stylesheet" href="styles/login.css">
+        <link rel="stylesheet" href="styles/list.css">
+        <link rel="stylesheet" href="styles/add.css">
+        <link rel="stylesheet" href="index.css">
+        <title>Employee Management</title>
     </head>
-    <body ng-app="app" ng-controller="homeController as home">
 
-        <div class="container">
-            <div class="row">
-                <div class="login-box">
-                    <h5 class="title mb-5">LOGIN</h5>
-                    <form name="loginForm" ng-submit="home.login()">
-
-                        <div class="input-group">
-                            <span class="input-group-text"><i class="fa fa-user"></i></span>
-                            <input class="form-control" type="text" placeholder="Username" name="username" ng-model="home.username" required>
-                        </div>
-                        <span class="text-danger" ng-if="loginForm.username.$touched && loginForm.username.$invalid">The username is required</span>
-
-                        <div class="input-group">
-                            <span class="input-group-text"><i class="fa fa-lock"></i></span>
-                            <input class="form-control" type="password" placeholder="Password" name="password" ng-model="home.password" required>
-                        </div>
-                        <span class="text-danger" ng-if="loginForm.password.$touched && loginForm.password.$invalid">The password is required</span>
-                        <span class="text-danger block" ng-show="home.error">Invalid Username or Password</span>
-                        <button class="btn mt-3" ng-disabled="!loginForm.$valid">SIGN IN</button>
-                    </form>
-                </div>
+    <body ng-app="app" ng-controller="appController as app">
+        <nav class="navbar navbar-light bg-green">
+            <div class="navbar-brand text-white">
+              Employeee Management
             </div>
-        </div>
-
+        </nav>
+        <main ng-view></main>
     </body>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <!-- UI Bootstrap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
+    <!-- Angular Material -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-animate/1.7.9/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+    <!-- controllers -->
     <script src="app.js"></script>
-    <script src="js/homeController.js"></script>
-    <script src="js/homeService.js"></script>
-  
+    <script src="js/loginController.js"></script>
+    <script src="js/listController.js"></script>
+    <script src="js/addController.js"></script>
+    <script src="js/employeeService.js"></script>
+
 </html>

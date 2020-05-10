@@ -1,0 +1,11 @@
+body {
+    background: none;
+}
+main {
+    display: flex;
+    height: 100vh;
+}
+
+.bg-green {
+    background-color: #1c6769;
+}

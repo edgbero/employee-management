@@ -1,0 +1,23 @@
+<span class="background-blue"></span>
+<div class="container login-container" ng-controller="loginController as login">
+    <div class="row">
+        <div class="login-box">
+            <h5 class="title mb-5">LOGIN</h5>
+            <form name="loginForm" ng-submit="login.login()">
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fa fa-user"></i></span>
+                    <input class="form-control" type="text" placeholder="Username" name="username" ng-model="login.username" required>
+                </div>
+                <span class="text-danger" ng-if="loginForm.username.$touched && loginForm.username.$invalid">The username is required</span>
+
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fa fa-lock"></i></span>
+                    <input class="form-control" type="password" placeholder="Password" name="password" ng-model="login.password" required>
+                </div>
+                <span class="text-danger" ng-if="loginForm.password.$touched && loginForm.password.$invalid">The password is required</span>
+                <span class="text-danger block" ng-show="login.error">Invalid Username or Password</span>
+                <button class="btn mt-3" ng-disabled="!loginForm.$valid">SIGN IN</button>
+            </form>
+        </div>
+    </div>
+</div>

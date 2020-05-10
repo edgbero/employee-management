@@ -1,18 +1,123 @@
 [
     {
-        "username": "admin",
-        "password": "admin",
-        "type": "Condo",
-        "price": 2000,
-        "address": "Jl K.h Senin",
-        "description": "Excelent place"
+        "username": "admin1",
+        "password": "admin1",
+        "firstName": "Aska",
+        "lastName": "Wiguna",
+        "email": "aska@gmail.com",
+        "birthDate": "1995-07-22",
+        "basicSalary": 7000000.00,
+        "status": "Single",
+        "group": "A",
+        "description": "2020-02-22"
+    }, 
+    {
+        "username": "sama",
+        "password": "sama",
+        "firstName": "Sama",
+        "lastName": "Archa",
+        "email": "sama@gmail.com",
+        "birthDate": "1998-02-21",
+        "basicSalary": 5500000.00,
+        "status": "Single",
+        "group": "C",
+        "description": "2020-02-22"
     },
     {
-        "username": "condo",
-        "password": "123qwe",
-        "type": "Condo",
-        "price": 2000,
-        "address": "Jl K.h Senin",
-        "description": "Excelent place"
+        "username": "admin2",
+        "password": "admin2",
+        "firstName": "Ras",
+        "lastName": "Grol",
+        "email": "ras@gmail.com",
+        "birthDate": "1895-07-22",
+        "basicSalary": 11000000.00,
+        "status": "Single",
+        "group": "E",
+        "description": "2020-02-22"
+    },
+    {
+        "username": "admin3",
+        "password": "admin3",
+        "firstName": "Zaska",
+        "lastName": "Biguna",
+        "email": "zaska@gmail.com",
+        "birthDate": "1994-07-22",
+        "basicSalary": 10000000.00,
+        "status": "Single",
+        "group": "A",
+        "description": "2020-02-22"
+    },
+    {
+        "username": "admin4",
+        "password": "admin4",
+        "firstName": "Lena",
+        "lastName": "Luna",
+        "email": "lena@gmail.com",
+        "birthDate": "1985-07-22",
+        "basicSalary": 10500000.21,
+        "status": "Married",
+        "group": "F",
+        "description": "2020-02-22"
+    },
+    {
+        "username": "admin5",
+        "password": "admin5",
+        "firstName": "Sun",
+        "lastName": "Gokong",
+        "email": "sun@gmail.com",
+        "birthDate": "1991-07-22",
+        "basicSalary": 100004000.00,
+        "status": "Single",
+        "group": "D",
+        "description": "2020-02-22"
+    },
+    {
+        "username": "admin6",
+        "password": "admin6",
+        "firstName": "Hoska",
+        "lastName": "Winwin",
+        "email": "hoska@gmail.com",
+        "birthDate": "1981-07-22",
+        "basicSalary": 2000000.00,
+        "status": "Single",
+        "group": "B",
+        "description": "2020-02-22"
+    },
+    {
+        "username": "admin7",
+        "password": "admin7",
+        "firstName": "Mus",
+        "lastName": "Tard",
+        "email": "mus@gmail.com",
+        "birthDate": "1999-01-02",
+        "basicSalary": 10000000.00,
+        "status": "Single",
+        "group": "D",
+        "description": "2020-02-22"
+    },
+    {
+        "username": "admin8",
+        "password": "admin8",
+        "firstName": "Carrot",
+        "lastName": "Lesley",
+        "email": "carrot@gmail.com",
+        "birthDate": "1997-12-02",
+        "basicSalary": 10000002.00,
+        "status": "Single",
+        "group": "E",
+        "description": "2020-02-22"
+    },
+    {
+        "username": "admin9",
+        "password": "admin9",
+        "firstName": "Man",
+        "lastName": "King",
+        "email": "mas@gmail.com",
+        "birthDate": "1990-02-22",
+        "basicSalary": 10000000.00,
+        "status": "Single",
+        "group": "D",
+        "description": "2020-02-22"
     }
 ]
+       

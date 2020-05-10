@@ -1,6 +1,6 @@
 angular
     .module('app')
-    .controller("homeController", function ($scope, homeService) {
+    .controller("loginController", function ($scope, $window, employeeService) {
 
     var self = this;
 
@@ -15,12 +15,12 @@ angular
 
     // hardcore login system
     function login() {
-        homeService.getData().then(function (response) {
+        employeeService.getData().then(function (response) {
             self.user = response.data;
             for(var i = 0; i < self.user.length ; i++) {
                 if(self.user[i].username === self.username && self.user[i].password === self.password) {
                     self.error = false;
-                    console.log('ok')
+                    $window.location = "#/list"
                     return true
                 }
                 else {

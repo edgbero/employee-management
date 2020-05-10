@@ -1,0 +1,82 @@
+.md-toast.edit .md-toast-content  {
+    background-color: #ffff00;
+    color: #333333;
+    font-weight: bold;
+}
+
+.md-toast.delete .md-toast-content{
+    background-color: #ff0000;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.list-container .row {
+    margin: 0;
+    justify-content: space-between;
+}
+
+.list-container .title {
+    color: #64bdc0;
+    font-weight: bold;
+}
+
+.list-container .btn-add {
+    background-color: #64bdc0;
+    text-decoration: none;
+    line-height: 3;
+}
+.list-container .btn-add:hover {
+    background-color: #1c6769;
+}
+
+.list-container .table td {
+    vertical-align: middle;
+}
+
+.list-container .search-box {
+    margin: 20px 0px;
+}
+.list-container .search-box input {
+    padding: 10px;
+}
+
+.list-container .custom-select {
+    width: auto;
+    height: 50px;
+}
+
+.pagination {
+    justify-content: center;
+}
+
+.pagination li {
+    border-radius: 5px;
+    margin: 0px 5px 0px 0px;
+    background-color: #64bdc0;
+    padding: 5px 15px;
+}
+
+.pagination li:hover {
+    background-color: #1c6769;
+}
+
+.pagination li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+@media (max-width: 480px) {
+    .list-container .search-box div{
+        margin-top: 10px;
+    }
+
+    .list-container .search-box {
+        margin-top: 0px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .list-container .title {
+        text-align: center;    
+    }
+}

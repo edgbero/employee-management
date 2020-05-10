@@ -1,0 +1,44 @@
+.add-container .row {
+    margin: 0;
+}
+
+.add-container .title{
+    color: #64bdc0;
+    font-weight: bold;
+}
+
+.add-container .btn{
+    text-align: center;
+    height: 50px;
+    width: 150px;
+    color: #ffffff;
+}
+
+.add-container .btn-submit {
+    background-color: #64bdc0;
+}
+.add-container .btn-submit:hover { 
+    background-color: #1c6769;
+}
+
+.add-container .btn-cancel {
+    border: 2px solid #64bdc0;
+    color: #64bdc0;
+}
+
+.add-container form .btn {
+    margin: 0px 50px;
+    width: 200px;
+    font-weight: bold;
+}
+
+  .full button span {
+    background-color: limegreen;
+    border-radius: 32px;
+    color: black;
+  }
+  .partially button span {
+    background-color: orange;
+    border-radius: 32px;
+    color: black;
+  }
