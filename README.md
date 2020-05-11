@@ -26,3 +26,4 @@ Whole system built only by frontend side:
 4. ```npm start```
 5. Visit your app at http://localhost:8080.
 
+author: Edgar Bero A
