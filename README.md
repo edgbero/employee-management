@@ -18,7 +18,7 @@ Whole system built only by frontend side:
 # Instalation / Running 
 1. To run the project make sure you have  Node.js JavaScript runtime and [npm](https://docs.npmjs.com/getting-started/)
 2. git clone ```https://github.com/edgbero/employee-management.git```
-3. cd ```employee management``` folder
+3. cd ```employee-management``` folder
 4. ```npm start```
 5. Visit your app at http://localhost:8080.
 
